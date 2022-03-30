@@ -16,7 +16,12 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyword))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func closeKeyword(){
+        view.endEditing(true)
     }
     
     @IBAction func clickedSaveButton(_ sender: Any) {

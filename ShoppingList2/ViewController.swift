@@ -12,9 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickedAddButton))
     }
 
+    @objc func clickedAddButton() {
+        performSegue(withIdentifier: "toDetailVC", sender: nil)
+    }
 
 }
 
