@@ -48,29 +48,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tai-r5-58L">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gorselsec" translatesAutoresizingMaskIntoConstraints="NO" id="tai-r5-58L">
                                 <rect key="frame" x="54" y="127" width="307" height="196"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usL-Q3-GMJ">
-                                <rect key="frame" x="54" y="377" width="307" height="34"/>
+                                <rect key="frame" x="54" y="363" width="307" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Onr-Ag-3ik"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TmH-LM-Sa6">
-                                <rect key="frame" x="54" y="442" width="307" height="34"/>
+                                <rect key="frame" x="54" y="431" width="307" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v8w-8d-Ckh">
-                                <rect key="frame" x="54" y="511" width="307" height="34"/>
+                                <rect key="frame" x="54" y="503" width="307" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Wer-1c-b4E"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPk-fM-dtg">
-                                <rect key="frame" x="158" y="621" width="99" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Viu-G0-zqg"/>
-                                </constraints>
+                                <rect key="frame" x="158" y="599" width="99" height="46"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
@@ -81,22 +84,23 @@
                         <viewLayoutGuide key="safeArea" id="UFU-tk-xIv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UFU-tk-xIv" firstAttribute="bottom" secondItem="uPk-fM-dtg" secondAttribute="bottom" constant="195" id="0C4-cv-kpS"/>
-                            <constraint firstItem="tai-r5-58L" firstAttribute="top" secondItem="UFU-tk-xIv" secondAttribute="top" constant="39" id="Eob-RB-ecT"/>
-                            <constraint firstItem="tai-r5-58L" firstAttribute="trailing" secondItem="usL-Q3-GMJ" secondAttribute="trailing" id="FNC-Af-lZw"/>
-                            <constraint firstItem="uPk-fM-dtg" firstAttribute="top" secondItem="v8w-8d-Ckh" secondAttribute="bottom" constant="76" id="IDY-Jw-4ch"/>
-                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="trailing" secondItem="v8w-8d-Ckh" secondAttribute="trailing" id="Kp6-PN-ONf"/>
-                            <constraint firstItem="uPk-fM-dtg" firstAttribute="leading" secondItem="UFU-tk-xIv" secondAttribute="leading" constant="158" id="Nmc-eP-2KX"/>
-                            <constraint firstItem="tai-r5-58L" firstAttribute="leading" secondItem="UFU-tk-xIv" secondAttribute="leading" constant="54" id="Q0r-Zd-jfh"/>
-                            <constraint firstItem="tai-r5-58L" firstAttribute="leading" secondItem="usL-Q3-GMJ" secondAttribute="leading" id="ZAL-kN-47s"/>
-                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="leading" secondItem="v8w-8d-Ckh" secondAttribute="leading" id="Zfh-d2-WVO"/>
-                            <constraint firstItem="tai-r5-58L" firstAttribute="centerX" secondItem="HeP-yw-Rz8" secondAttribute="centerX" id="aIZ-2V-XHN"/>
-                            <constraint firstItem="usL-Q3-GMJ" firstAttribute="top" secondItem="tai-r5-58L" secondAttribute="bottom" constant="54" id="bBa-Eu-OKZ"/>
-                            <constraint firstItem="v8w-8d-Ckh" firstAttribute="centerX" secondItem="uPk-fM-dtg" secondAttribute="centerX" id="cjs-vf-mdz"/>
-                            <constraint firstItem="usL-Q3-GMJ" firstAttribute="leading" secondItem="TmH-LM-Sa6" secondAttribute="leading" id="lZQ-2T-oNb"/>
-                            <constraint firstItem="usL-Q3-GMJ" firstAttribute="trailing" secondItem="TmH-LM-Sa6" secondAttribute="trailing" id="rEH-6Q-azU"/>
-                            <constraint firstItem="v8w-8d-Ckh" firstAttribute="top" secondItem="TmH-LM-Sa6" secondAttribute="bottom" constant="35" id="rdb-79-l9p"/>
-                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="top" secondItem="usL-Q3-GMJ" secondAttribute="bottom" constant="31" id="vnH-ie-xJ8"/>
+                            <constraint firstItem="tai-r5-58L" firstAttribute="leading" secondItem="usL-Q3-GMJ" secondAttribute="leading" id="7FJ-SA-oRW"/>
+                            <constraint firstItem="v8w-8d-Ckh" firstAttribute="centerX" secondItem="uPk-fM-dtg" secondAttribute="centerX" id="7Wv-Y3-ccc"/>
+                            <constraint firstItem="tai-r5-58L" firstAttribute="top" secondItem="UFU-tk-xIv" secondAttribute="top" constant="39" id="IkD-s0-LKo"/>
+                            <constraint firstItem="tai-r5-58L" firstAttribute="leading" secondItem="UFU-tk-xIv" secondAttribute="leading" constant="54" id="JnV-cq-8FT"/>
+                            <constraint firstItem="tai-r5-58L" firstAttribute="trailing" secondItem="usL-Q3-GMJ" secondAttribute="trailing" id="Jng-n1-Glx"/>
+                            <constraint firstItem="usL-Q3-GMJ" firstAttribute="leading" secondItem="TmH-LM-Sa6" secondAttribute="leading" id="KYa-Gg-TNO"/>
+                            <constraint firstItem="uPk-fM-dtg" firstAttribute="top" secondItem="v8w-8d-Ckh" secondAttribute="bottom" constant="62" id="aZB-hP-Kaj"/>
+                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="trailing" secondItem="v8w-8d-Ckh" secondAttribute="trailing" id="b1Y-kG-uhJ"/>
+                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="top" secondItem="usL-Q3-GMJ" secondAttribute="bottom" constant="34" id="bhR-bz-JxE"/>
+                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="centerY" secondItem="HeP-yw-Rz8" secondAttribute="centerY" id="dtw-ZJ-XPH"/>
+                            <constraint firstItem="TmH-LM-Sa6" firstAttribute="leading" secondItem="v8w-8d-Ckh" secondAttribute="leading" id="fca-t9-Wcm"/>
+                            <constraint firstItem="uPk-fM-dtg" firstAttribute="leading" secondItem="UFU-tk-xIv" secondAttribute="leading" constant="158" id="iPU-Ki-wE7"/>
+                            <constraint firstItem="tai-r5-58L" firstAttribute="centerX" secondItem="HeP-yw-Rz8" secondAttribute="centerX" id="j6h-Uq-6jb"/>
+                            <constraint firstItem="UFU-tk-xIv" firstAttribute="bottom" secondItem="uPk-fM-dtg" secondAttribute="bottom" constant="217" id="r7f-cX-15f"/>
+                            <constraint firstItem="usL-Q3-GMJ" firstAttribute="top" secondItem="tai-r5-58L" secondAttribute="bottom" constant="40" id="uge-VH-U57"/>
+                            <constraint firstItem="usL-Q3-GMJ" firstAttribute="trailing" secondItem="TmH-LM-Sa6" secondAttribute="trailing" id="wlU-ED-G59"/>
+                            <constraint firstItem="v8w-8d-Ckh" firstAttribute="top" secondItem="TmH-LM-Sa6" secondAttribute="bottom" constant="38" id="xum-dw-jBL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="clD-jq-Emw"/>
@@ -131,6 +135,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gorselsec" width="410" height="257"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
