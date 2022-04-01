@@ -23,7 +23,41 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         if chosenProductName != ""{
             if let uuidString = chosenProductID?.uuidString{
-                print(uuidString)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Shopping")
+                fetchRequest.predicate = NSPredicate.init(format: "id = %@", uuidString)
+                fetchRequest.returnsObjectsAsFaults = false
+                
+                do{
+                    let results = try context.fetch(fetchRequest)
+                    
+                    if results.count > 0 {
+                        
+                        for result in results as! [NSManagedObject] {
+                            
+                            if let name = result.value(forKey: "name") as? String{
+                                nameTextField.text = name
+                            }
+                            
+                            if let price = result.value(forKey: "price") as? Int{
+                                priceTextField.text = String(price)
+                            }
+                            
+                            if let size = result.value(forKey: "size") as? String{
+                                sizeTextField.text = size
+                            }
+                            
+                            if let imageData = result.value(forKey: "image") as? Data{
+                                let image = UIImage(data: imageData)
+                                imageView.image = image
+                            }
+                        }
+                    }
+                }catch{
+                    print("errorrr!!!")
+                }
             }
         }else{
             nameTextField.text = ""
