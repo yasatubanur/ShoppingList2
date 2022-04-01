@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var nameArray = [String]()
     var idArray = [UUID]()
+    var chosenName = ""
+    var chosenUUID : UUID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = nameArray[indexPath.row]
         return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.chosenProductName = chosenName
+            destinationVC.chosenProductID = chosenUUID
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenName = nameArray[indexPath.row]
+        chosenUUID = idArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailVC", sender: nil)
+    }
 }
 
