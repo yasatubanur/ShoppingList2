@@ -10,6 +10,7 @@ import CoreData
 
 class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet var saveButton: UIButton!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priceTextField: UITextField!
@@ -22,6 +23,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
         if chosenProductName != ""{
+            saveButton.isHidden = true
+            
             if let uuidString = chosenProductID?.uuidString{
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 let context = appDelegate.persistentContainer.viewContext
@@ -60,6 +63,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
             }
         }else{
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
             nameTextField.text = ""
             priceTextField.text = ""
             sizeTextField.text = ""
@@ -84,6 +89,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         imageView.image = info[.editedImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     

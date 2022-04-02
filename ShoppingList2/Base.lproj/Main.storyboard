@@ -108,6 +108,7 @@
                         <outlet property="imageView" destination="tai-r5-58L" id="ozp-dw-4nt"/>
                         <outlet property="nameTextField" destination="usL-Q3-GMJ" id="U7h-hX-uuP"/>
                         <outlet property="priceTextField" destination="TmH-LM-Sa6" id="T0M-W4-OPP"/>
+                        <outlet property="saveButton" destination="uPk-fM-dtg" id="rgr-3C-eff"/>
                         <outlet property="sizeTextField" destination="v8w-8d-Ckh" id="ttY-xh-3dt"/>
                     </connections>
                 </viewController>
